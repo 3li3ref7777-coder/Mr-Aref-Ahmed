@@ -1,0 +1,156 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: #0f172a; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: ltr; 
+}
+
+.booking-form {
+    width: 380px;
+    padding: 40px 30px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./حجز.jpeg"); 
+    background-size: cover;      
+    background-position: center;  
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 215, 0, 0.3); 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+    animation: fadeIn 1s ease;
+    text-align: left;
+}
+
+.booking-form h2 {
+    color: #fff;
+    margin-bottom: 35px;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-align: center; 
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+
+.input-box input,
+.input-box select {
+    width: 70%;
+    padding: 0px 15px 12px 45px; 
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 45px; 
+    transform: translateY(-50%);
+    color: #ddd;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    left: 15px; 
+    transform: translateY(-50%);
+    color: #ffd700; 
+    transition: 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+
+.input-box input:focus ~ i,
+.input-box input:valid ~ i,
+.input-box select:focus ~ i,
+.input-box select:valid ~ i {
+    top: -12px;
+    left: 10px;
+    font-size: 13px;
+    color: #ffd700;
+}
+
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label,
+.input-box select:focus ~ label,
+.input-box select:valid ~ label {
+    top: -12px;
+    left: 35px; 
+    font-size: 12px;
+    color: #ffd700;
+    background: #111; 
+    padding: 0 8px;
+    border-radius: 4px;
+}
+
+
+.input-box input:focus,
+.input-box select:focus {
+    border-color: #ffd700;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+select option {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+  
+    background: linear-gradient(45deg, #1e293b, #334155);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(45deg, #ffd700, #b8860b);
+    color: #000;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+}
+
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}

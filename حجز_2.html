@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>حجز الصف الثاني  الاعدادي </title>
+    <link rel="stylesheet" href="./stayl_ofbocking.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<form action="submit_booking.php" method="post" class="booking-form">
+
+    <h2>حجز الصف الثاني الاعدادي </h2>
+
+   
+    <div class="input-box">
+        <i class="fa fa-user"></i>
+        <input type="text" name="name" required>
+        <label>الاسم</label>
+    </div>
+
+   
+    <div class="input-box">
+        <i class="fa fa-phone"></i>
+        <input type="tel" name="phone" required>
+        <label>رقم الهاتف</label>
+    </div>
+
+    
+    <div class="input-box">
+        <i class="fa fa-user-shield"></i>
+        <input type="tel" name="parent_phone" required>
+        <label>رقم ولي الأمر</label>
+    </div>
+
+   
+    <div class="input-box">
+        <i class="fa fa-clock"></i>
+        <select name="date" required>
+            <option value="" disabled selected></option>
+            <option value="8am">8 صباحًا</option>
+            <option value="10am">10 صباحًا</option>
+            <option value="4pm">4 مساءً</option>
+            <option value="5-30pm">5:30 مساءً</option>
+            <option value="7-30pm">7:30 مساءً</option>
+            <option value="9pm">9 مساءً</option>
+        </select>
+        <label>ميعاد الحصة</label>
+    </div>
+
+    <!-- زر -->
+    <button type="submit">احجز الآن</button>
+
+</form>
+
+</body>
+</html>
