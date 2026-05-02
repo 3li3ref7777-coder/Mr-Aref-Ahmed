@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<form action="submit_booking.php" method="post" class="booking-form">
+<form action="submit_booking.php" method="post" class="booking-form" id="loginForm">
 
     <h2>حجز الصف الثالث الاعدادي </h2>
 
@@ -53,6 +53,13 @@
     <button type="submit">احجز الآن</button>
 
 </form>
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault(); 
+
+    window.location.href = "https://3li3ref7777-coder.github.io/Mr-Aref-Ahmed/";
+});
+</script>
 
 </body>
 </html>
