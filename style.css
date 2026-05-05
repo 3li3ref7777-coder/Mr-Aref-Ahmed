@@ -8,7 +8,7 @@
 
 body {
     overflow-x: hidden;
-    background-color: #f4f4f4; 
+    background: linear-gradient(45deg, #1a1a1a, #16231d99, #444);
 }
 
 nav {
@@ -452,8 +452,6 @@ nav ul li a:hover i {
     overflow: hidden;
     position: relative;
     cursor: pointer;
-
-    /* glass effect */
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
 
@@ -583,7 +581,7 @@ footer h1 {
     letter-spacing: 1px;
 }
 
-/* القائمة */
+
 .social {
     display: flex;
     gap: 30px;
@@ -592,7 +590,7 @@ footer h1 {
     justify-content: center;
 }
 
-/* الأيقونة */
+
 .social li a {
     position: relative;
     display: flex;
@@ -616,13 +614,13 @@ footer h1 {
     box-shadow: -15px 15px 20px rgba(0,0,0,0.3);
 }
 
-/* تأثير Hover */
+
 .social li a:hover {
     transform: perspective(800px) rotateX(-20deg) rotateY(15deg) translateY(-10px);
     box-shadow: -25px 25px 30px rgba(0,0,0,0.5);
 }
 
-/* Tooltip */
+
 .social li a span {
     position: absolute;
     top: -45px;
@@ -644,15 +642,13 @@ footer h1 {
     top: -55px;
 }
 
-/* ألوان */
+
 .social li:nth-child(1) a:hover { background: #3b5999; }
 .social li:nth-child(2) a:hover { background: #25d366; }
 .social li:nth-child(3) a:hover { background: #e4405f; }
 .social li:nth-child(4) a:hover { background: #fffc00;  }
 
-/* ========================= */
-/* 📱 Responsive */
-/* ========================= */
+
 
 @media (max-width: 768px) {
     footer h1 {
@@ -679,8 +675,17 @@ footer h1 {
         width: 50px;
         height: 50px;
         font-size: 18px;
-
-        /* تقليل الـ 3D عشان الموبايل */
         transform: perspective(600px) rotateX(-10deg) rotateY(10deg);
     }
+}
+
+.abut_me, .photoes, .booking, footer {
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: all 0.8s ease-out; 
+}
+
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }

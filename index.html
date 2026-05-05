@@ -145,5 +145,26 @@
     </ul>
 </footer>
  </div> <!--//نهايه div contaner_pag1 -->
+
+ <script>
+    const sections = document.querySelectorAll('.abut_me, .photoes, .booking, footer');
+
+    const options = {
+        threshold: 0.2 
+    };
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
 </body>
 </html>
